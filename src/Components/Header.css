@@ -1,17 +1,19 @@
+/* Desktop navbar */
 .navbar ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  margin: 0 auto;
-  padding: 0 20px;
+  margin: 0;
+  padding: 0 1rem;
+  gap: 1rem;
   color: white;
   font-weight: bold;
-  flex-wrap: wrap;
   list-style: none;
 }
 
+/* Nav items */
 .navbar ul li {
-  padding: 10px 20px;
+  padding: 10px 10px;
   cursor: pointer;
 }
 
@@ -35,27 +37,50 @@
   background-color: rgb(200, 200, 247);
 }
 
-.nav-items {
-  margin-top: 10px;
-  margin-right: 20px;
-}
-
 .nav-items:hover {
   color: rgb(200, 200, 247);
 }
 
-/* 🔽 Responsive Design */
+/* Hamburger toggle icon */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile styles */
 @media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.25rem;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #002461;
+    display: none;
+    padding: 1rem 0;
+  }
+
+  .navbar.open {
+    display: block;
+  }
+
   .navbar ul {
     flex-direction: column;
     align-items: center;
+    padding: 0;
     gap: 10px;
-    padding: 10px 0;
-    margin-left: 0;
   }
 
   .navbar ul li {
-    padding: 8px 0;
+    padding: 10px 0;
   }
 
   .contact-btn {
@@ -63,10 +88,6 @@
     height: 45px;
     font-size: 16px;
     line-height: 45px;
-  }
-
-  .nav-items {
-    margin-right: 0;
   }
 }
 
