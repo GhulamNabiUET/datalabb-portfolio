@@ -6,7 +6,7 @@ Welcome to the **DataLaBB Portfolio** — a modern, elegant, and responsive webs
 
 ## 🌐 Live Preview
 
-> 🔗 [View the Portfolio Website](#) *(Replace with your actual live URL)*
+> 🔗 [View the Portfolio Website](https://datalabb-portfolio.vercel.app/) 
 
 ---
 
