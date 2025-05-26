@@ -1,0 +1,45 @@
+.navbar ul{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    margin-right: 40px;
+    color: white;
+    padding-right: 10px;
+    margin-left: -250px;
+    font-weight: bold;
+}
+
+.navbar ul li{
+    padding-right: 50px;
+    list-style: none;
+    cursor: pointer;
+}
+
+    .contact-btn {
+        display: inline-block;
+        width: 150px;
+        height: 50px;
+        background-color: white;
+        color: #1f2937;
+        font-size: 17px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        text-align: center;
+        line-height: 50px; /* Center text vertically */
+        text-decoration: none; /* Optional: removes underline */
+    }
+
+
+.contact-btn:hover{
+    background-color: rgb(200, 200, 247);
+}
+
+.nav-items{
+    margin-top: 10px ;
+    margin-right: 50px;
+}
+
+.nav-items:hover{
+    color: rgb(200, 200, 247);
+}
