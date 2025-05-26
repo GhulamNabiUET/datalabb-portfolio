@@ -1,45 +1,80 @@
-.navbar ul{
-    display: flex;
-    justify-content: space-between;
-    justify-items: center;
-    margin-right: 40px;
-    color: white;
-    padding-right: 10px;
-    margin-left: -250px;
-    font-weight: bold;
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 20px;
+  color: white;
+  font-weight: bold;
+  flex-wrap: wrap;
+  list-style: none;
 }
 
-.navbar ul li{
-    padding-right: 50px;
-    list-style: none;
-    cursor: pointer;
+.navbar ul li {
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
-    .contact-btn {
-        display: inline-block;
-        width: 150px;
-        height: 50px;
-        background-color: white;
-        color: #1f2937;
-        font-size: 17px;
-        border: none;
-        border-radius: 30px;
-        cursor: pointer;
-        text-align: center;
-        line-height: 50px; /* Center text vertically */
-        text-decoration: none; /* Optional: removes underline */
-    }
-
-
-.contact-btn:hover{
-    background-color: rgb(200, 200, 247);
+.contact-btn {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  background-color: white;
+  color: #1f2937;
+  font-size: 17px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 50px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
-.nav-items{
-    margin-top: 10px ;
-    margin-right: 50px;
+.contact-btn:hover {
+  background-color: rgb(200, 200, 247);
 }
 
-.nav-items:hover{
-    color: rgb(200, 200, 247);
+.nav-items {
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+.nav-items:hover {
+  color: rgb(200, 200, 247);
+}
+
+/* 🔽 Responsive Design */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    margin-left: 0;
+  }
+
+  .navbar ul li {
+    padding: 8px 0;
+  }
+
+  .contact-btn {
+    width: 130px;
+    height: 45px;
+    font-size: 16px;
+    line-height: 45px;
+  }
+
+  .nav-items {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-btn {
+    width: 120px;
+    height: 40px;
+    font-size: 15px;
+    line-height: 40px;
+  }
 }

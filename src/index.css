@@ -10,21 +10,10 @@
 }
 
 body {
-  /* background: linear-gradient(125deg, #f5f7fa 0%, #c3e0e5 100%); */
-  /* background: linear-gradient(135deg, #1f2f98, #5f2c82); */
-  /* background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); */
   background: linear-gradient(to right, #e0eafc, #cfdef3);
-  /* background: linear-gradient(to right, #74ebd5, #ACB6E5); */
-  /* background: linear-gradient(to right, #0575E6, #00F260); */
-
-
-  /* background-image: url('/Pictures/bg.jpg');  */
-  /* background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); */
-
-  background-repeat: repeat;              /* Repeats both horizontally and vertically */
-  background-size: auto;    
-
-  color: #333333; /* Dark gray for text */
+  background-repeat: repeat;
+  background-size: auto;
+  color: #333333;
   line-height: 1.75;
   padding: 20px;
   display: flex;
@@ -34,12 +23,11 @@ body {
   overflow-x: hidden;
 }
 
-/* Name class */
 .Name {
   font-family: "Kaushan Script", cursive;
   font-weight: 400;
   font-style: normal;
-  color: #348AA7; /* Calming teal for headings */
+  color: #348AA7;
   font-size: 3rem;
   padding: 15px;
   text-align: center;
@@ -48,31 +36,28 @@ body {
   animation: fadeIn 2s ease-in-out;
 }
 
-/* Subtle animations */
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
 
-/* Hide scrollbar */
 ::-webkit-scrollbar {
   display: none;
 }
 
-/* Box class with glassmorphism */
 .box {
-  --box-border--border: linear-gradient(135deg, rgba(84, 153, 199, 0.15), rgba(50, 188, 156, 0.15)); /* Soft blue to green */
-  --box--shadow-color: rgba(84, 153, 199, 0.15); /* Softer blue shadow */
+  --box-border--border: linear-gradient(135deg, rgba(84, 153, 199, 0.15), rgba(50, 188, 156, 0.15));
+  --box--shadow-color: rgba(84, 153, 199, 0.15);
 
   position: relative;
   font-weight: 700;
   width: 100%;
   max-width: 600px;
   margin: 40px auto;
-  background: rgba(235, 233, 200, 0.1); /* Light glass effect */
+  background: rgba(235, 233, 200, 0.1);
   padding: 30px;
   border-radius: 20px;
-  backdrop-filter: blur(10px); /* Glassmorphism effect */
+  backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 15px 25px var(--box--shadow-color);
   transition: all 0.4s ease;
@@ -82,11 +67,10 @@ body {
 
 .box:hover {
   transform: scale(1.03);
-  box-shadow: 0 20px 40px rgba(84, 153, 199, 0.3); /* Hover shadow with soft blue */
+  box-shadow: 0 20px 40px rgba(84, 153, 199, 0.3);
   background: linear-gradient(135deg, rgba(84, 153, 199, 0.2), rgba(50, 188, 156, 0.2));
 }
 
-/* Box content */
 .box-content {
   position: relative;
   z-index: 2;
@@ -95,31 +79,27 @@ body {
 
 .box-content h2 {
   font-size: 2rem;
-  color: #333333; /* Dark gray for content text */
+  color: #333333;
   opacity: 0;
   animation: slideUp 1.5s ease-in-out forwards;
   animation-delay: 0.5s;
 }
+
 @keyframes scroll {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
 }
 
 .animate-scroll {
   animation: scroll 10s linear infinite;
 }
 
-/* Hides the scrollbar on mobile screens */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
 .no-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 @keyframes slideUp {
@@ -127,7 +107,6 @@ body {
   100% { transform: translateY(0); opacity: 1; }
 }
 
-/* Image handling */
 img {
   max-width: 100%;
   height: auto;
@@ -136,10 +115,9 @@ img {
   z-index: 2;
 }
 
-/* Button styles */
 .button {
   display: inline-block;
-  background: linear-gradient(135deg, #56CCF2, #2F80ED); /* Soft blue gradient */
+  background: linear-gradient(135deg, #56CCF2, #2F80ED);
   color: white;
   padding: 12px 40px;
   border-radius: 12px;
@@ -154,18 +132,16 @@ img {
 }
 
 .button:hover {
-  background: linear-gradient(135deg, #2F80ED, #56CCF2); /* Invert gradient on hover */
+  background: linear-gradient(135deg, #2F80ED, #56CCF2);
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(84, 153, 199, 0.3); /* Soft blue shadow */
+  box-shadow: 0 10px 20px rgba(84, 153, 199, 0.3);
 }
 
 .button:active {
   transform: scale(0.98);
 }
 
-
-
-/* Responsive Design */
+/* 🔽 Responsive Enhancements */
 @media (max-width: 768px) {
   .box {
     padding: 20px;
@@ -183,5 +159,30 @@ img {
   .button {
     padding: 10px 30px;
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 15px;
+    flex-direction: column;
+  }
+
+  .Name {
+    font-size: 2rem;
+    padding: 10px;
+  }
+
+  .box-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .button {
+    padding: 8px 24px;
+    font-size: 0.95rem;
+  }
+
+  .box {
+    margin: 20px auto;
   }
 }
